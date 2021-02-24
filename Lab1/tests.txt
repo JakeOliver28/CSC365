@@ -1,0 +1,321 @@
+// Jacob Oliver, Monica Chavez, Cory Baxes
+// CSC 365. Winter 2018
+// Lab 1-1 test suite
+
+// TC-1
+// Tests Requirements R3, R4
+// short form command name, existing student
+// expected output: HAVIR BOBBIE 2 108 GAVIN HAMER
+
+S: HAVIR
+
+// TC-2
+// Tests Requirements R3, R4
+// short form command name, non-existing student
+// expected output: <empty line>
+
+S: NEMO
+
+// TC-3
+// Tests Requirements R3, R4
+// long form command name, existing student
+// expected output: HAVIR BOBBIE 2 108 2 88 HAMER GAVIN
+
+Student: HAVIR
+
+// TC-4
+// Tests Requirements R3, R5
+// long form command name, non-existing student
+// expected output: <empty line>
+
+Student: NEMO Bus
+
+// TC-5
+// Tests Requirements R3, R5
+// short form command name, existing student
+// expected output: COOKUS XUAN 52
+
+S: COOKUS B
+
+// TC-6
+// Tests Requirements R3, R5
+// long form command name, existing student
+// expected output: ELHADDAD SHANTE 52
+
+Student: ELHADDAD Bus
+
+// TC-7
+// Tests Requirements R3, R6
+// short form command name, existing teacher
+// expected output: WOOLARD NOLAN
+//                  VILARDO EMMANUEL
+
+T: STEIB
+
+// TC-8
+// Tests Requirements R3, R6
+// short form command name, non-existing teacher
+// expected output: <empty line>
+
+T: BAXTER
+
+// TC-9
+// Tests Requirements R3, R6
+// long form command name, existing teacher
+// expected output: BRODERSEN HYE
+//                  THEUNISSEN GRACE
+
+T: ALPERT
+
+// TC-10
+// Tests Requirements R3, R7
+// short form command name, non-existing grade
+// expected output: <empty line>
+
+G: 47
+
+// TC-11
+// Tests Requirements R3, R7
+// short form command name, existing grade
+// expected output: <empty line>
+
+G: 0
+
+// TC-12
+// Tests Requirements R3, R7
+// long form command name, existing grade
+// expected output: GARTH JOHN
+
+Grade: 1
+
+// TC-13
+// Tests Requirements R3, R8
+// short form command name, existing bus
+// expected output: CARTER CORKER 4 105
+//                  DEEDRA WORBINGTON 4 112
+//                  MANIE CIGANEK 3 107
+//                  KENDRA SPANICEK 4 112
+//                  FLOY CLECKLER 6 109
+//                  TERESE WICINSKY 2 108
+//                  LELA LINHART 3 107
+//                  KRYSTAL DELUNA 4 112
+//                  ZANDRA COMO 4 112
+
+B: 53
+
+// TC-14
+// Tests Requirements R3, R8
+// short form command name, non-existing bus
+// expected output: <empty line>
+
+B: 8
+
+// TC-15
+// Tests RequirementB:s R3, R8
+// long form command name, existing bus
+// expected output: PHUONG SCHOENECKER 6 109
+//                  MATHILDA FINCHMAN 6 111
+//                  HYE BRODERSEN 3 110
+//                  BOBBIE HAVIR 2 108
+//                  ELDON MASSART 4 105
+//                  JOHN GARTH 1 103
+//                  RANDOLPH CREMEANS 6 109
+//                  CARRIE KREESE 6 109
+
+Bus: 0
+
+// TC-16
+// Tests Requirements R3, R9
+// long form command name, highest GPA, existing grade
+// expected output: TERESE WICINSKY 3.22 GAVIN HAMER 53
+
+Grade: 2 High
+
+// TC-17
+// Tests Requirements R3, R9
+// short form command name, highest GPA, existing grade
+// expected output: JOHN GARTH 3.14 ADOLPH FALKER 0
+
+G: 1 H
+
+// TC-18
+// Tests Requirements R3, R9
+// short form command name, lowest GPA, existing grade
+// expected output: BUSTER KOZOLA 2.76 GAVIN HAMER 55
+
+G: 2 L
+
+// TC-19
+// Tests Requirements R3, R9
+// long form command name, lowest GPA, non-existing grade
+// expected output: <empty line>
+
+Grade: 10 Low
+
+// TC-20
+// Tests Requirements R3, R10
+// long form command name, existing grade
+// expected output: 2.95
+
+Average: 2
+
+// TC-21
+// Tests Requirements R3, R10
+// long form command name, non-existing grade
+// expected output: <empty line>
+
+Average: 9
+
+// TC-22
+// Tests Requirements R3, R10
+// short form command name, existing grade
+// expected output: <empty line>
+
+A: 0
+
+// TC-23
+// Tests Requirements R3, R11
+// short form command name
+// expected output: 0: 0
+//                  1: 2
+//                  2: 13
+//                  3: 9
+//                  4: 15
+//                  5: 0
+//                  6: 21
+
+I
+
+// TC-24
+// Tests Requirements R3, R11
+// long form command name
+// expected output: 0: 0
+//                  1: 2
+//                  2: 13
+//                  3: 9
+//                  4: 15
+//                  5: 0
+//                  6: 21
+
+Info
+
+// TC-25
+// Tests Requirements E1
+// invalid command
+// expected output: Invalid command.
+
+JKL:"
+
+// TC-26
+// Tests Requirements R3, R5, E1
+// long form command name, too many arguments
+// expected output: Invalid command.
+
+Student: HAVIR Bus GPA
+
+// TC-27
+// Tests Requirements NR1
+// short form command name, existing classroom
+// expected output: NOLAN WOOLERY 2 104 51 2.92 STEIB GALE
+//                  EMMANUEL VILARDO 2 104 56 2.88 STEIB GALE
+
+SGC: 104
+
+// TC-28
+// Tests Requirements NR1
+// long form command name, non-existing classroom
+// expected output: <empty line>
+
+StudentGivenClassroom: 321093
+
+// TC-29
+// Tests Requirements NR2
+// short form command name, existing classroom
+// expected output: ROCIO FAFARD 107
+
+TGC: 107
+
+// TC-30
+// Tests Requirements NR2
+// long form command name, non-existing classroom
+// expected output: <empty line>
+
+TeachersGivenClassroom: 3213489
+
+// TC-31
+// Tests Requirements NR3
+// short form command name, existing grade
+// expected output: STEIB GALE 104
+//                  HAMER GAVIN 108
+
+TGG: 2
+
+// TC-32
+// Tests Requirements NR3
+// long form command name, non-existing grade
+// expected output: <empty line> 
+
+TeachersGivenGrade: 90
+
+// TC-33
+// Tests Requirements NR4
+// short form command name
+// expected output: 101: 1
+//                  102: 5
+//                  103: 2
+//                  104: 2
+//                  105: 6
+//                  106: 2
+//                  107: 7
+//                  108: 11
+//                  109: 5
+//                  110: 2
+//                  111: 9
+//                  112: 8
+
+// TC-34
+// Tests Requirements NR4
+// long form command name
+// expected output: 101: 1
+//                  102: 5
+//                  103: 2
+//                  104: 2
+//                  105: 6
+//                  106: 2
+//                  107: 7
+//                  108: 11
+//                  109: 5
+//                  110: 2
+//                  111: 9
+//                  112: 8
+
+Enrollment
+
+// TC-35
+// Tests Requirements NR5
+// short form command name, teachers
+// expected output: see file "tests.out"
+
+An: T
+
+// TC-36
+// Tests Requirements NR5
+// short form command name, grade levels
+// expected output: see file "tests.out"
+
+An: G
+
+// TC-37
+// Tests Requirements NR5
+// long form command name, bus routes
+// expected output: see file "tests.out"
+
+Analytics: Bus
+
+// TC-38
+// Tests Requirements R3, R13
+// quit command
+// expected output: program terminates
+
+Q
+

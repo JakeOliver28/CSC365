@@ -1,0 +1,21 @@
+// Jacob Oliver
+// CSC 365
+
+I got the data from https://github.com/awesomedata/awesome-public-datasets
+I used the titanic dataset.
+
+I created one table that held all of the data that was available from the csv file.
+The table contains essentially all of the information that the registry has on 
+each passenger. This contains passenger id as a primary key, as well as other
+info like their age, gender, fare, and whether they survived.
+
+Mapping challenges included that some of the entries in the dataset did not contain
+information for all of the attributes given. This made it a little harder to read
+in the file, as well as create proper SQL insert statements. The structure of the
+csv files made reading the files a lot simpler.
+
+Is it necessary to have a unique passenger id to identify passengers? Meaning,
+is it possible to idenfity unique passengers without this key?
+Can a default, unique value be made to be inserted for entries with no input for
+certain attributes?
+Would it be more useful/more efficient to split up the data into different tables?
