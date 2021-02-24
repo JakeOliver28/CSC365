@@ -1,0 +1,30 @@
+Jacob Oliver
+CSC 365 Lab 6
+
+The name of the database that I created the lab6-specific INN tables
+was jolive06. 
+
+I did this lab solo.
+
+I ran these commands in the terminal before running the program.
+
+export CLASSPATH=$CLASSPATH:mysql-connector-java-5.1.45-bin.jar:.
+export HP_JDBC_URL=jdbc:mysql://csc365winter2018.webredirect.org/jolive06>?autoReconnect=true\&useSSL=false
+export HP_JDBC_USER=jolive06
+export HP_JDBC_PW=365W18_011151994
+
+To compile the program...
+
+javac InnReservations.java
+
+
+To run the program...
+
+java InnReservations
+
+
+Enter only an integer 1-5 on initial prompt.
+Follow instructions exactly (i.e must enter 'N/A' or '<date> to <date>' precisely).
+Enter dates as 'YYYY-MM-DD'.
+Adding spaces unnecessarily could prevent program from running correctly.
+Program fails to find next available check-in date and length of most recent stay.
